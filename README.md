@@ -1,64 +1,37 @@
-## general 
-    - admin privileges
-    - charts to reflect project progress
+# BugTrack
 
-## login/sign up
-    - facebook log in not working 
-    - test mode
-    - add to users collection for google/github log in 
-    - css 
+Local-first bug tracker built with Vue, Vite, Supabase, PostgreSQL, and Vercel deployment readiness.
 
-## main 
-    - dashboard. 
-    - your task | project progress | announcement | message? | schedule (display "nothing coming up" if none)
-    - need design ideas 
+## Features
 
-## members 
-    -include accounts using google/github log in 
-    - delete/ edit function for admin 
-    - add profile pictures
-    - hiredate as account creation date
-    - employee number 
-        - same as ticket #
-    - click email address to send email (pop up)
+- Email/password authentication UI with local demo fallback.
+- Role-aware behavior for admin, PM, and engineer users.
+- Ticket queue with search, filters, assignment, edit drawer, and delete permissions.
+- JSON and CSV ticket export.
+- Dashboard visuals for ticket totals, status, priority, workload, and activity.
+- Draft Supabase/PostgreSQL schema with RLS policies.
 
-## ticket 
-    -set ID unedditable, read from firebase. 
-    -click ticket to view details 
-        --style
-    -assign to drop menu that contains members list 
-    -drag drop to change status 
-    -pie chart to reflect data
+## Run Locally
 
-## projects 
-    - import from github? (commit history, etc)
-    - firebase 
-        -thumbnail
-        -description
-    - click to view details 
-        -details above 
-        -authors 
-        -tickets related to the project
-    - ability to join on project, needs approval by the owner of project
-    - admin can add/remove/edit projects details 
-        - can assign members 
-    - members, tags accept array, auto complete 
-        - tags don't have to be in collections 
+```bash
+npm install
+npm run dev
+```
 
-## calendar 
-    - save events to server (it disappears on refresh rn)
+Open `http://127.0.0.1:5173`.
 
+## Checks
 
-### urgent/crtical bug
-- ticket 
-    - ticket number needs to be initialized (0)
-    - either non input to hold ticket id + 1 value and display
-        - or  input with readOnly and assign input value (not placeholder)
-        
-### low-priority 
-- facebook log in not working 
-- log in with ID/PW
-- tailwind css
-    -sidebar close button
-- user profile pop up click anywhere to close 
+```bash
+npm test
+npm run build
+```
 
+## Supabase
+
+Local demo mode works without credentials. To connect Supabase, copy `.env.example` to `.env` and set:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_PUBLISHABLE_KEY`
+
+Review `supabase/schema.sql` before applying it to a real project.

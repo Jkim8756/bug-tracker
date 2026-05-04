@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BugTrack">
+  <rect width="64" height="64" rx="14" fill="#0f766e"/>
+  <path d="M22 24h20v22a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V24Z" fill="#ffffff"/>
+  <path d="M24 18a8 8 0 0 1 16 0v6H24v-6Z" fill="#d9f3ee"/>
+  <path d="M16 30h12M36 30h12M16 42h12M36 42h12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 28v22" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+</svg>
